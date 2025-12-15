@@ -1,0 +1,662 @@
+html {
+   background: radial-gradient(circle, #fef2db 0%, #7d6535 50%, #c2af8e 100%);
+}
+
+body {
+  padding: 2rem;
+  margin: 2.1rem;
+  background-color: rgb(236, 236, 224);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem 2rem;
+  color: #7d6535;
+  text-shadow: 3px 3px 0 #ffffff;
+  margin: 2rem auto;
+  z-index: 1;
+  width: fit-content;
+  border: 3px solid #7d6535;
+  border-radius: 15px;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(https://cdn.jsdelivr.net/gh/IvyTerra/archaeology-site@main/images/background-image-2066855_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: -1;
+}
+
+#menu-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#menu-container nav {
+  flex: 1;
+  max-width: 16rem;
+}
+
+#menu-container nav h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  /*background-color: #824003;*/
+  background-color: #c2af8e;
+  border: 3px ridge #7d6535;
+  padding: 0.3rem;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  text-shadow: 3px 3px 0 #7d6535; /* donji desno */
+}
+
+#menu-container nav ul {
+  list-style: disc;
+  margin: 1rem;
+  padding-left: 1.2rem;
+}
+
+#menu-container nav ul li {
+  margin-bottom: 0.3rem;
+}
+
+#menu-container nav ul a {
+  display: inline-block;
+  padding: 0.2rem;
+  line-height: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+#menu-container nav a:hover {
+  background-color: #7d6535;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+h2 {
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+#chronology-menu summary {
+  cursor: pointer;
+}
+
+#chronology-menu summary::marker {
+  color: #7d6535;
+}
+
+#chronology-menu details {
+  display: block;
+  margin: 0.5rem auto;
+  text-align: left;
+  max-width: 250px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+#chronology-menu ul {
+  list-style: disc;
+  margin: 1rem;
+  padding-left: 1.2rem;
+}
+
+#chronology-menu ul li {
+  margin-bottom: 0.3rem;
+}
+
+#chronology-menu ul a {
+  display: inline-block;
+  padding: 0.2rem;
+  line-height: 1rem;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+#chronology-menu a:hover {
+  background-color: #7d6535;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.content article {
+  float: left;
+  width: 60%;
+  line-height: 1.5rem;
+  align-items: center;
+  border: 2px solid #c2af8e;
+  border-style: dotted;
+  border-radius: 15px;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content ul li {
+  line-height: 1.8rem;
+}
+
+.content figure {
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.content figure img {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: #fef2db;
+  border: 3px solid #c2af8e;
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 200px;
+  height: auto;
+}
+
+.content figcaption {
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+}
+
+.content h2,
+h3 {
+  text-align: center;
+}
+
+.map-link {
+  float: left;
+  height: 80px;
+  margin: 0 12px 6px 0;
+  cursor: pointer;
+}
+
+.map-link a {
+  display: inline;
+}
+
+.article::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#content .multimedia {
+  display: block;
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+aside {
+  float: right;
+  width: 30%;
+  margin-left: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #7d6535;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: start;
+}
+
+aside h4 {
+  text-align: center;
+}
+
+.extra img:not(.map-icon) {
+  padding: 0.5rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 200px;
+  display: block;
+  height: auto;
+  align-items: center;
+  background-color: #fef2db;
+  border: 3px solid #c2af8e;
+}
+
+.extra {
+  line-height: 1.5rem;
+}
+
+.extra ul li {
+  line-height: 1.5rem;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+aside .map-icon {
+  width: 60px;
+  max-width: none;
+  min-width: 0;
+  height: auto;
+}
+
+.study-list {
+  list-style: none;
+  padding: 0;
+}
+
+.study-list li {
+  padding-left: 30px;
+  margin-bottom: 0.4rem;
+  background-image: url("https://cdn.jsdelivr.net/gh/IvyTerra/archaeology-site@main/images/magnifying-glass-297822_1920.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.activities li {
+  line-height: 1.2rem;
+  padding: 0.5rem;
+}
+
+.video {
+  display: block;
+  margin: 0 auto;
+}
+
+.border {
+  display: block;
+  margin: 2rem auto;
+  width: 50%;
+  max-width: 60%;
+}
+
+.border img {
+  display: block;
+  height: auto;
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
+  background: none;
+  border: none;
+}
+
+#content .border {
+  display: block;
+  clear: both;
+  max-width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#map,
+h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 0%;
+}
+
+.map-container {
+  position: relative;
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.map-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.marker-lepenski-vir,
+.marker-vinca,
+.marker-belgrade,
+.marker-sirmium,
+.marker-viminacium,
+.marker-studenica,
+.marker-resava {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #fef2db;
+  background-color: #7d6535;
+  transform: translate(-50%, -50%); /* centriranje markera tačno na koordinati */
+  cursor: pointer;
+}
+
+.marker-lepenski-vir:hover,
+.marker-vinca:hover,
+.marker-belgrade:hover,
+.marker-sirmium:hover,
+.marker-viminacium:hover,
+.marker-studenica:hover,
+.marker-resava:hover {
+  background-color: #c2af8e;
+  box-shadow: 0 0 6px rgba(232, 198, 8, 0.852);
+}
+
+/* Pozicije lokaliteta u procentima */
+.marker-lepenski-vir {
+  top: 35%;
+  left: 75%;
+}
+
+.marker-lepenski-vir::after {
+  content: "Lepenski Vir";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7d6535;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacitity 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.marker-lepenski-vir:hover::after {
+  opacity: 1;
+}
+
+.marker-vinca {
+  top: 31.8%;
+  left: 44.6%;
+}
+
+.marker-belgrade {
+  top: 30.6%;
+  left: 38.9%;
+}
+
+.marker-sirmium {
+  top: 26.5%;
+  left: 17.5%;
+}
+
+.marker-viminacium {
+  top: 33%;
+  left: 56%;
+}
+
+.marker-studenica {
+  top: 57.5%;
+  left: 39%;
+}
+
+.marker-resava {
+  top: 46.5%;
+  left: 61%;
+}
+
+.table {
+  border-radius: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+}
+
+.table-with-bg {
+  position: relative;
+  background-image: url(https://cdn.jsdelivr.net/gh/IvyTerra/archaeology-site@main/images/wooden-floor-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.table-with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.table-with-bg * {
+  position: relative;
+  z-index: 2;
+}
+
+#table-title {
+  padding: 20px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.table img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.table::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.table th,
+.table td {
+  border: 2px solid #f5f1e8;
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table tr {
+  height: 2rem;
+}
+
+.table thead tr th {
+  height: 2.5rem;
+  text-align: center;
+}
+
+td.site {
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+th.site:hover {
+  background-color: lightgoldenrodyellow;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+td.site:hover {
+  background-color: lightgoldenrodyellow;
+  transform: scale(1.06);
+  transition: transform 0.6s ease;
+  height: auto;
+}
+
+td.site .hover-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table td.site a {
+  color: #2f2001;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.table td.site a:hover {
+  text-decoration-style: double;
+}
+
+td.prehistoric-site a:hover {
+  color: green;
+  text-decoration-style: double;
+}
+
+td.antiquity-site a:hover {
+  color: purple;
+  text-decoration-style: double;
+}
+
+td.medieval-site a:hover {
+  color: darkblue;
+  text-decoration-style: double;
+}
+
+.table td.site a.singidunum:hover {
+  color: purple;
+  text-decoration-style: double;
+}
+
+.table td.site a.belgrade:hover {
+  color: darkblue;
+  text-decoration-style: double;
+}
+
+.hover-img {
+  display: none;
+  max-width: 250px;
+  height: auto;
+  margin-top: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+td:hover .hover-img {
+  display: block;
+  text-align: center;
+  opacity: 1;
+}
+
+td:hover .hover-img th.prehistory,
+td.prehistory,
+th.antiquity,
+td.antiquity,
+th.medieval,
+td.medieval {
+  width: 24%;
+}
+
+th.prehistory:hover {
+  background-color: #c4f3b3;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+td.prehistory:hover {
+  background-color: #c4f3b3;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+th.antiquity:hover {
+  background-color: #c7ace2;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+td.antiquity:hover {
+  background-color: #c7ace2;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+th.medieval:hover {
+  background-color: #86c2e2;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+td.medieval:hover {
+  background-color: #86c2e2;
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+blockquote {
+  text-align: center;
+}
+
+footer details {
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #fef2db;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+footer details summary {
+  color: #3b1e02;
+}
+
+footer details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0.5rem;
+}
+
+footer details ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer summary {
+  cursor: pointer;
+  font-weight: bolder;
+  padding: 0.5rem 0;
+}
+
+.ivy {
+  text-align: center;
+  line-height: 2rem;
+  text-decoration: underline;
+  color: #7d6535;
+  border: 3px solid #7d6535;
+  border-radius: 16px;
+  background-color: lightgoldenrodyellow;
+  display: block;
+  max-width: 30%;
+  padding: 10px;
+  margin: 1rem auto;
+}
+
+.top {
+  text-align: center;
+}
